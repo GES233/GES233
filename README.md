@@ -1,6 +1,8 @@
 ### Hi 👋
 
-My name's GES233, and you can call me LSP or RSP which means `LittleSweetPotato` or `RoastSweetPotato`.
+My name's GES233, and you can call me LSP[^1] or RSP which means `LittleSweetPotato` or `RoastSweetPotato`.
+
+[^1]: LSP also means old pervert in Chinese net phrases.
 
 ## About Me
 
@@ -31,12 +33,13 @@ Not well versed in italicized items.
 </details>
 
 <details>
-<summary>Some area which tightly bond with programming 💽</summary>
+<summary>Some area bond with programming 💽</summary>
 
 - Web Dev
   - Python🐍
 - _Deep Learning_
 - Anime/voice generating
+  - TTS
 
 </details>
 

@@ -1,16 +1,29 @@
 ## Hi there 👋
 
-<!--
-**GES233/GES233** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This is RoastedChestnut(GES233).
 
-Here are some ideas to get you started:
+```elixir
+quote do
+  def education do
+    [ # ALL in agriculture university
+      {"Animal Science", "QAU", {2019, 2023}},
+      {"Public Management", "CAU", {2023, 2025}}
+    ]
+  end
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  def skills do
+    %{
+      :"post focused on" => ~w(Python Flask/Quart Sanic Julia),
+      mainly: ~w(Elixir Phoenix),
+      little: ~w(TailwindCSS LaTeX Typst),
+      newbie: ~w(JavaScript Svelte Rust Scala),
+      anticipation: ~w(Minecraft ESP32 Scheme)
+    }
+  end
+end
+|> then(
+  &Module.create(RoastedChestnut, &1, Macro.Env.location(__ENV__))
+  # Why not GES233?
+  # see `apps/ges233/lib/ges233.ex` in https://github.com/GES233/simple_blog_engine
+)
+```

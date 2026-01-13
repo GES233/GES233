@@ -33,7 +33,7 @@ quote do
 
          WIP(deprecated) codebase in https://github.com/GES233/LivestockMonitor .
          """},
-    code_pv: {~FuzzyD[2019-03-??], :maybe_future, "PV, but in Code"，
+    code_pv: {~FuzzyD[2019-03-??], :maybe_future, "PV, but in Code",
               "See < https://github.com/GES233/MortalDrinksElixir > ."},
     cau_urp: {~D[2023-11-16], ~FuzzyD[2024-11-20], "Participate in Research on La Maison Verte(Françoise Dolto)",
               "See < https://ges233.github.io/2024/10/After-URP/ > ."}
@@ -52,7 +52,7 @@ quote do
 
   def bio, do: [
       blog: "https://ges233.github.io",
-      mail: " ████████████@████.com"
+      mail: "████████████@████.com"
     ]
 
   def bibliography, do: [
@@ -65,4 +65,6 @@ end
   # Why not GES233?
   # see `apps/ges233/lib/ges233.ex` in https://github.com/GES233/simple_blog_engine
 )
+|> Module.register_attribute(:maybe_called_tag?, accumulate: true)
+|> Module.put_attribute(:maybe_called_tag?, ["It doesn't metter."])
 ```

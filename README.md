@@ -3,6 +3,21 @@
 This is RoastedChestnut(GES233).
 
 ```elixir
+experiences = %{
+  pbb: {~FuzzyD[2015-??-??], ~FuzzyD[2017-??-??], "PBB project",
+        "DIY-CPU at VERY EARLY stage by using Minecraft RedStone/Logisim. Only some `.cric` file saved."},
+  qy: {~FuzzyD[2017-??-??], :maybe_future, "QyProject",
+       """
+       Layered Generate Specification/Protocol. Inspired by a brainstorm in highschool.
+
+       WIP(deprecated) codebase in https://github.com/GES233/LivestockMonitor .
+       """},
+  code_pv: {~FuzzyD[2019-03-??], :maybe_future, "PV, but in Code",
+            "See < https://github.com/GES233/MortalDrinksElixir > ."},
+  cau_urp: {~D[2023-11-16], ~FuzzyD[2024-11-20], "Participate in Research on La Maison Verte(Françoise Dolto)",
+            "See < https://ges233.github.io/2024/10/After-URP/ > ."}
+}
+
 quote do
   defmodule Sigil do
     def sigil_FuzzyD(date_string, _opts), do: {:approx, date_string}
@@ -23,21 +38,6 @@ quote do
       newbie: ~w(JavaScript Svelte Rust Scala),
       anticipation: ~w(MinecraftModDev ESP32 Scheme) ++ ["become Vocaloid producer"]
     }
-
-  @experiences %{
-    pbb: {~FuzzyD[2015-??-??], ~FuzzyD[2017-??-??], "PBB project",
-          "DIY-CPU at VERY EARLY stage by using Minecraft RedStone/Logisim. Only some `.cric` file saved."},
-    qy: {~FuzzyD[2017-??-??], :maybe_future, "QyProject",
-         """
-         Layered Generate Specification/Protocol. Inspired by a brainstorm in highschool.
-
-         WIP(deprecated) codebase in https://github.com/GES233/LivestockMonitor .
-         """},
-    code_pv: {~FuzzyD[2019-03-??], :maybe_future, "PV, but in Code",
-              "See < https://github.com/GES233/MortalDrinksElixir > ."},
-    cau_urp: {~D[2023-11-16], ~FuzzyD[2024-11-20], "Participate in Research on La Maison Verte(Françoise Dolto)",
-              "See < https://ges233.github.io/2024/10/After-URP/ > ."}
-  }
 
   for {id, {start_date, end_date, name, desc}} <- unquote(Macro.escape(@experiences)) do
     def projects(unquote(id)) do

@@ -36,6 +36,12 @@ quote do
   
          WIP(deprecated) codebase in https://github.com/GES233/LivestockMonitor .
          """},
+    meowcave: {~W[2022-02-21], ~D[2024-03-01], "MeowCave",
+               """
+               I was removed from a small group, so I wanted to build my own site to become a site owner.
+
+               No related repos were in privated.
+               """},
     code_pv: {~FUZZYD[2019-03-??], :maybe_future, "PV, but in Code",
               "See < https://github.com/GES233/MortalDrinksElixir > ."},
     cau_urp: {~D[2023-11-16], ~FUZZYD[2024-11-20], "Participate in Research on La Maison Verte(Françoise Dolto)",
@@ -62,6 +68,7 @@ quote do
 
   Module.register_attribute(__MODULE__, :maybe_called_tag?, accumulate: true)
   Module.put_attribute(__MODULE__, :maybe_called_tag?, ["It doesn't metter."])
+  # Que le temps ne vaut que du jour où il nous est compté
 
   def bibliography, do: [
       {:article, doi: "10.16431/j.cnki.1671-7236.2022.08.021", role: "ONLY participated in, NOT mainly author"},

@@ -40,7 +40,7 @@ quote do
                """
                I was removed from a small group, so I wanted to build my own site to become a site owner.
 
-               No related repos were in privated.
+               New repos in private.
                """},
     code_pv: {~FUZZYD[2019-03-??], :maybe_future, "PV, but in Code",
               "See < https://github.com/GES233/MortalDrinksElixir > ."},

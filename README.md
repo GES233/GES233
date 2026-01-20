@@ -76,5 +76,9 @@ defmodule RoastedChestnut do
       {:article, doi: "10.16431/j.cnki.1671-7236.2022.08.021", role: "ONLY participated in, NOT mainly author"},
       # <Maybe append in the future>
     ]
+
+  def git_metrics, do: GitHubUserMetrics.query(30802664, :terminal, :all)
 end
 ```
+
+![](github-metrics.svg)

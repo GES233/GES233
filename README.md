@@ -12,14 +12,15 @@ import Sigil
 defmodule RoastedChestnut do
   @moduledoc """
   > *Que le temps ne vaut que du jour où il nous est compté*
+  >
   >   --Indila, Parle à ta tête
   """
   @maybe_called_tag? ["It doesn't metter."]
 
   def education,
     do: [ # ALL in agriculture university
-      {"Animal Science", "QAU", {2019, 2023}, "Bachelor of Science in Agriculture"},
-      {"Public Management", "CAU", {2023, 2025}, "Bachelor of Management"}
+      {"Animal Science", "QAU", {2019, 2023}, "Bachelor of Science in Agriculture"}, # Animal Science
+      {"Public Management", "CAU", {2023, 2025}, "Bachelor of Management"} # Public Management
     ]
 
   def skills, do: %{
@@ -40,7 +41,7 @@ defmodule RoastedChestnut do
          """
          Layered Generate Specification/Protocol. Inspired by a brainstorm in highschool.
   
-         WIP(deprecated) codebase in https://github.com/GES233/LivestockMonitor .
+         WIP(deprecated) codebase: GES233/LivestockMonitor
          """},
     meowcave: {~W[2022-02-21], ~D[2024-03-01], "MeowCave",
                """
@@ -49,9 +50,9 @@ defmodule RoastedChestnut do
                New repos in private.
                """},
     code_pv: {~FUZZYD[2019-03-??], :maybe_future, "PV, but in Code",
-              "See < https://github.com/GES233/MortalDrinksElixir > ."},
+              "See GES233/MortalDrinksElixir (WIP for a long time)"},
     cau_urp: {~D[2023-11-16], ~FUZZYD[2024-11-20], "Participate in Research on La Maison Verte(Françoise Dolto)",
-              "See < https://ges233.github.io/2024/10/After-URP/ > ."}
+              "See <https://ges233.github.io/2024/10/After-URP/> ."}
   }
 
   def projects(id) do
@@ -59,9 +60,11 @@ defmodule RoastedChestnut do
       {start_date, end_date, name, desc} ->
         """
         #{inspect(start_date)} to #{inspect(end_date)}
-        **#{name}**
+
+        **#{name}**:
         #{desc}
         """
+
       nil ->
         :future
     end
@@ -69,7 +72,7 @@ defmodule RoastedChestnut do
 
   def bio, do: [
       blog: "https://ges233.github.io",
-      mail: "████████████@████.com"
+      mail: "███████.█████@outlook.com" |> String.replace("█████", "roasted") |> String.replace("roasted██", "chestnut")
     ]
 
   def bibliography, do: [
@@ -77,7 +80,7 @@ defmodule RoastedChestnut do
       # <Maybe append in the future>
     ]
 
-  def git_metrics, do: GitHubUserMetrics.query(30802664, :terminal, :all)
+  def git_metrics, do: GitHubUserMetrics.query(30802664, :all, theme: :terminal)
 end
 ```
 

@@ -15,12 +15,13 @@ defmodule RoastedChestnut do
   >
   >   --Indila, Parle à ta tête
   """
+
   @maybe_called_tag? ["It doesn't metter."]
 
   def education,
     do: [ # ALL in agriculture university
-      {"Animal Science", "QAU", {2019, 2023}, "Bachelor of Science in Agriculture"}, # Animal Science
-      {"Public Management", "CAU", {2023, 2025}, "Bachelor of Management"} # Public Management
+      {"Animal Science", "QAU", {2019, 2023}, "Bachelor of Science in Agriculture"},
+      {"Public Management", "CAU", {2023, 2025}, "Bachelor of Management"}
     ]
 
   def skills, do: %{
@@ -39,18 +40,23 @@ defmodule RoastedChestnut do
     qy: {~FUZZYD[2017-??-??], :maybe_future,  # Until today, and maybe re-activated in future
          "QyProject",
          """
-         Layered Generate Specification/Protocol. Inspired by a brainstorm in highschool.
+         Layered Generate Specification/Protocol. Inspired by a brainstorm with SVS in highschool.
   
-         WIP(deprecated) codebase: GES233/LivestockMonitor
+         Deprecated codebase(bio poc): GES233/LivestockMonitor
+         WIP codebase(legacy editor): GES233/EquinoxEditor
          """},
     meowcave: {~W[2022-02-21], ~D[2024-03-01], "MeowCave",
                """
                I was removed from a small group, so I wanted to build my own site to become a site owner.
 
-               New repos in private.
+               Now repos are all in private.
                """},
     code_pv: {~FUZZYD[2019-03-??], :maybe_future, "PV, but in Code",
-              "See GES233/MortalDrinksElixir (WIP for a long time)"},
+              """
+              Learning JS and relational programming.
+
+              See GES233/MortalDrinksElixir (WIP for a long time)
+              """},
     cau_urp: {~D[2023-11-16], ~FUZZYD[2024-11-20], "Participate in Research on La Maison Verte(Françoise Dolto)",
               "See <https://ges233.github.io/2024/10/After-URP/> ."}
   }
@@ -66,7 +72,7 @@ defmodule RoastedChestnut do
         """
 
       nil ->
-        :future
+        :future_or_nil
     end
   end
 
@@ -80,7 +86,7 @@ defmodule RoastedChestnut do
       # <Maybe append in the future>
     ]
 
-  def git_metrics, do: GitHubUserMetrics.query(30802664, :all, theme: :terminal)
+  def git_metrics, do: GitHubUserMetrics.query(30802664, content: :all, theme: :terminal)
 end
 ```
 

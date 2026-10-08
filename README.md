@@ -36,7 +36,11 @@ defmodule RoastedChestnut do
   # Timeline of things I tried to build or experiences
   @experiences %{
     pbb: {~FUZZYD[2015-??-??], ~FUZZYD[2017-??-??], "PBB project",
-          "DIY-CPU at VERY EARLY stage by using Minecraft RedStone/Logisim. Only some `.cric` file saved."},
+          """
+          ~DIY-CPU at VERY EARLY stage by using Minecraft RedStone/Logisim. Only some `.cric` file saved.~
+
+          See GES233/PooProjects
+          """},
     qy: {~FUZZYD[2017-??-??], :maybe_future,  # Until today, and maybe re-activated in future
          "QyProject",
          """
